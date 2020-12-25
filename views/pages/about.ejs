@@ -1,0 +1,43 @@
+<%- contentFor('body') %>
+<div class="row">
+<table class="table table-striped header-fixed">
+  <thead style="position: sticky;top: 50" class="thead-dark"> 
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">CodProd</th>
+        <th scope="col">Derivação</th>
+        <th scope="col">Desc Cod Prod</th>
+        <th scope="col">Desc Derivação</th>
+        <th scope="col">Editar</th>
+      </tr>
+    </thead> 
+    <thead>
+    <tbody>
+      <tr>        
+        <% for (rows of rows){%>
+            <tr>
+            <td><%= rows.ID %></td>
+            <td><%= rows.CodProd %></td>
+            <td><%= rows.Derivacao %></td>
+            <td><%= rows.DescCodProd %></td>
+            <td><%= rows.DescDerivacao%></td>
+            <td><button type="button" class="btn btn-primary">Primary</button></td>
+            </tr>
+            <% } %>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
